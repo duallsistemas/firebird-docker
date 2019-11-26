@@ -1,6 +1,6 @@
 # Description
 
-Official image to use Firebird from containers.
+Official image to use Duall and Firebird from containers.
 
 This repository is used by Duall ERP.
 
