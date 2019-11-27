@@ -6,7 +6,7 @@
 # Preparing the environment:
 #
 # docker build --force-rm -t firebird .
-# docker run -p 3050:3050 -v <your-dir>:/var/lib/firebird/3.0/data -dt firebird
+# docker run -p 3050:3050 -v <your-dir>:/var/lib/firebird/3.0/data -dt --restart always firebird
 ###############################################################
 
 FROM debian:buster-slim
@@ -29,7 +29,7 @@ RUN \
         /etc/firebird/3.0/firebird.conf && \
     echo "ALTER USER sysdba SET password 'masterkey';" | isql \
         -u sysdba -p masterkey /var/lib/firebird/3.0/system/security3.fdb && \
-    echo 'DUALL = /var/lib/firebird/3.0/data/DUALL.FDB' >> \
+    echo 'duall = /var/lib/firebird/3.0/data/duall.fdb' >> \
         /etc/firebird/3.0/databases.conf && \
     chown firebird:firebird -R /var/lib/firebird/3.0/data/*
 
