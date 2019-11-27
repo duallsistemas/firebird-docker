@@ -1,8 +1,8 @@
 # Description
 
-Official image to use Duall and Firebird from containers.
+Official image to use Firebird from containers.
 
-This repository is used by Duall ERP.
+This image is available at Docker Hub [here](https://hub.docker.com/r/duallsistemas/firebird).
 
 <hr>
 
